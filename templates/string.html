@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parenthesis Validator</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    {% block head %}{% endblock %}
+
+</head>
+
+{% block body %}
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="element">
+                <a class="heading" href="/">Home</a>
+            </div>
+            <div>
+                <h1>
+                    Parenthesis Validator for Strings
+                </h1>
+            </div>
+            <div class="element">
+                <a class="heading" href="About Us">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="box">
+        <p>
+            Enter String Below
+        </p>
+        <br>
+        <form method="POST" class="user_input">
+            <input name="content" id="content" type="text" placeholder="Enter The String Here">
+            <br>
+            <input type="submit" value="check">
+        </form>
+        <br>
+
+        {% for string in string %}
+        <p>
+            String is : {{ string.content }}
+        </p>
+        <br>
+        <p>
+            Balance : {{ string.isBalanced }}
+        </p>
+        {% endfor %}
+    </section>
+</body>
+
+{% endblock %}
+
+</html>
